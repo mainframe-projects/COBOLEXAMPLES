@@ -1,0 +1,48 @@
+      ******************************************************************
+      * Author:
+      * Date:
+      * Purpose:
+      * Tectonics: cobc
+      ******************************************************************
+       IDENTIFICATION DIVISION.
+      *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+       PROGRAM-ID. YOUR-PROGRAM-NAME.
+       ENVIRONMENT DIVISION.
+      *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+       CONFIGURATION SECTION.
+      *-----------------------
+       INPUT-OUTPUT SECTION.
+      *-----------------------
+       DATA DIVISION.
+      *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+       FILE SECTION.
+      *-----------------------
+       WORKING-STORAGE SECTION.
+       01 CurrentDate.
+           02 CurrentYear PIC 99.
+           02 CurrentMonth PIC 99.
+           02 CurrentDay PIC 99.
+       01 UserName.
+           02 FirstName PIC X(10).
+           02 LastName PIC X(6).
+
+
+      *-----------------------
+       PROCEDURE DIVISION.
+      *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+       MAIN-PROCEDURE.
+      **
+      * The main procedure of the program
+      **
+
+            DISPLAY "User Name : " WITH NO ADVANCING
+            ACCEPT UserName
+            DISPLAY "***************"
+            ACCEPT CurrentDate FROM DATE
+            DISPLAY FirstName
+            DISPLAY LastName
+            DISPLAY CurrentYear
+            DISPLAY "Hello world"
+            STOP RUN.
+      ** add other procedures here
+       END PROGRAM YOUR-PROGRAM-NAME.

@@ -1,0 +1,67 @@
+      ******************************************************************
+      * Author:
+      * Date:
+      * Purpose:
+      * Tectonics: cobc
+      ******************************************************************
+       IDENTIFICATION DIVISION.
+      *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+       PROGRAM-ID. YOUR-PROGRAM-NAME.
+       ENVIRONMENT DIVISION.
+      *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+       CONFIGURATION SECTION.
+      *-----------------------
+       INPUT-OUTPUT SECTION.
+      *-----------------------
+       DATA DIVISION.
+      *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+       FILE SECTION.
+      *-----------------------
+       WORKING-STORAGE SECTION.
+       01 ws-num PIC 9(1)V9(2).
+       01 StudentRec.
+           02 StudentId PIC 9(7).
+           02 StudentName.
+               03 FirstName PIC X(9).
+               03 LastName PIC X(12).
+           02 DateofBirth.
+               03 YOB PIC 9(4).
+               03 MOB PIC 99.
+               03 DOB PIC 99.
+           02 CourseId PIC X(5).
+           02 GPA PIC 9(1)V9(2).
+       01 ws-num2 PIC 99 VALUE ZEROS.
+       01 ws-num3 PIC XX VALUE SPACES.
+      *-----------------------
+       PROCEDURE DIVISION.
+      *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+       MAIN-PROCEDURE.
+      **
+      * The main procedure of the program
+      **
+            MOVE "1205621" TO StudentId.
+            MOVE "Kadir" TO FirstName.
+            MOVE "Kýlýç" TO LastName.
+            MOVE 19920402 TO DateofBirth.
+            MOVE "L300" TO CourseId.
+            MOVE 3.85 TO GPA.
+            DISPLAY StudentId.
+            DISPLAY StudentName.
+            DISPLAY DateofBirth.
+            DISPLAY YOB.
+            DISPLAY MOB.
+            DISPLAY DOB.
+            DISPLAY CourseId.
+            DISPLAY GPA.
+            DISPLAY ws-num
+            ADD 1 TO ws-num.
+            DISPLAY ws-num.
+            DISPLAY ws-num2.
+            DISPLAY "Kadir"ws-num3"ali".
+            DISPLAY "one, " WITH NO ADVANCING
+            DISPLAY "two, " WITH NO ADVANCING
+            DISPLAY "three".
+            DISPLAY "selm"SPACES"merhab"SPACES"nbr".
+            STOP RUN.
+      ** add other procedures here
+       END PROGRAM YOUR-PROGRAM-NAME.
